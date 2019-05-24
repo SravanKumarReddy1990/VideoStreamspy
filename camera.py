@@ -7,10 +7,12 @@ class Camera(object):
     files 1.jpg, 2.jpg and 3.jpg at a rate of one frame per second."""
 
     def __init__(self):
-       self.frames = []
+       self.video = cv2.VideoCapture('VID-20190112-WA0003.mp4')
+
+    def __del__(self):
+        self.video.release()
 
     def get_frame(self):
-        vidcap = cv2.VideoCapture('VID-20190112-WA0003.mp4')
-        success,image = vidcap.read()
+        success,image = self.video.read()
         ret, jpeg = cv2.imencode('.jpg', image)
         return jpeg.tobytes()
