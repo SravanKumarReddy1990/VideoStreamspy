@@ -6,3 +6,4 @@ itsdangerous==0.24
 picamera==1.8
 gunicorn==19.0.0
 opencv-python-headless
+tornado
