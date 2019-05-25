@@ -13,7 +13,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """Video streaming home page."""
-    return render_template('index.html')
+    return render_template('index1.html')
 
 
 def gen(camera):
