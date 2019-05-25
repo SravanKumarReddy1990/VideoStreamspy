@@ -88,7 +88,7 @@ def get_range(request):
     
 @app.route(VIDEO_PATH)
 def video():
-    path = 'VID-20190112-WA0003.mp4'
+    path = '20190525_153948.mp4'
 #    path = 'demo.mp4'
 
     start, end = get_range(request)
